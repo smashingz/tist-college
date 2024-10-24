@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Комментарии</title>
+</head>
+<body>
+    <form method="post" action="mailto:mail@mail.mail">
+        <fieldset>
+            <legend>Комментарий на сайт</legend>
+            <p>
+                Имя пользователя: <input type="text" name="username" value="Имя" />
+                Адрес почты: <input type="email" name="email" value="mail@mail.su" />
+            </p>
+            <p>
+                Оценка:<br />
+                <label for="rating-like">Понравилось</label><input type="radio" id="rating-like" name="rating" value="like" /><br />
+                <label for="rating-dislike">Не понравилось</label><input type="radio" id="rating-dislike" name="rating" value="dislike" />
+            </p>
+            <p>
+                Текст комментария: <textarea name="comment">Введите текст</textarea>
+            </p>
+            <p>
+                <input type="submit" value="Отправить" />
+                <input type="reset" value="Очистить" />
+            </p>
+        </fieldset>
+    </form>
+    <form method="get" action="submit-request.php">
+        <fieldset>
+            <legend>Отправить предложение на почту</legend>
+            <p>
+                Имя пользователя: <input type="text" name="request-username" value="Имя" />
+                Адрес почты: <input type="email" name="request-email" value="mail@mail.su" />
+            </p>
+            <p>
+                Текст предложения: <textarea name="request-comment">Введите текст</textarea>
+            </p>
+            <p>
+                <input type="submit" value="Отправить" />
+                <input type="reset" value="Очистить" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
