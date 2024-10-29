@@ -1,0 +1,12 @@
+th img {
+    width: 50%;
+}
+
+img {
+    width: 20%;
+    float: right;
+}
+
+th img.border {
+    border: dashed;
+}
