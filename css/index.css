@@ -26,3 +26,11 @@ img {
     height: 165px;
     float: right !important;
 }
+
+* {
+    font-size: 24px;
+}
+
+h1,h1 * {
+    font-size: 48px;
+}
