@@ -1,0 +1,28 @@
+nav {
+    border: double;
+}
+
+/* Comment */
+.external-link {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main-header {
+    color: red;
+}
+
+img {
+    width: 520px;
+    height: 660px;
+    float: left !important;
+}
+
+p.plain-text {
+    color: cornflowerblue;
+}
+
+img {
+    width: 130px;
+    height: 165px;
+    float: right !important;
+}

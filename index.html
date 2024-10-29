@@ -4,11 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Начальная страница</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+        img {
+            width: 260px;
+            height: 330px;
+            float: right;
+        }
+    </style>
 </head>
 
-<body>
+<body style="font-family: 'Comic Sans MS'">
     <header>
-        <h1>Галиле́о <abbr title="Hello Listello&Kotello😋">Галиле́й</abbr></h1>
+        <h1 id="main-header">Галиле́о <abbr title="Hello Listello&Kotello😋">Галиле́й</abbr></h1>
     </header>
     <nav>
         <h2>Содержание</h2>
@@ -33,8 +41,8 @@
     </nav>
     <main>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/390px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg"
-             width="260" height="330" align="right" />
-        <p>
+              />
+        <p class="plain-text">
             Галилео Галилей (итал. Galileo Galilei; 15 февраля 1564, Пиза — 8 января 1642, Арчетри) — итальянский физик,
             механик, астроном, философ, математик, оказавший значительное влияние на науку своего времени.
         </p>
@@ -42,8 +50,8 @@
         <div>
             <p>Источники информации:</p>
             <ul>
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D0%B8%D0%BB%D0%B5%D0%B9,_%D0%93%D0%B0%D0%BB%D0%B8%D0%BB%D0%B5%D0%BE" target="sourcez">Информация на Вики</a></li>
-                <li><a href="https://biblioclub.ru/index.php?page=author_red&id=31797" target="sourcez">Информация в библиотеке</a></li>
+                <li class="external-link"><a class="plain-text" href="https://ru.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D0%B8%D0%BB%D0%B5%D0%B9,_%D0%93%D0%B0%D0%BB%D0%B8%D0%BB%D0%B5%D0%BE" target="sourcez">Информация на Вики</a></li>
+                <li class="external-link"><a class="plain-text" href="https://biblioclub.ru/index.php?page=author_red&id=31797" target="sourcez">Информация в библиотеке</a></li>
             </ul>
             
         </div>
