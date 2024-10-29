@@ -1,0 +1,5 @@
+input[name$=email] {
+	background-color: gold;
+	font-size: large;
+	color: purple;
+}
