@@ -31,6 +31,11 @@ img {
     font-size: 24px;
 }
 
-h1,h1 * {
+h1,
+h1 * {
     font-size: 48px;
+}
+
+.index-main !important {
+    font-family: 'Comic Sans MS'
 }
