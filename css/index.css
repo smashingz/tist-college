@@ -36,6 +36,6 @@ h1 * {
     font-size: 48px;
 }
 
-.index-main !important {
+#index-main !important {
     font-family: 'Comic Sans MS'
 }
