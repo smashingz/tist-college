@@ -2,13 +2,13 @@ nav {
     border: double;
 }
 
+#da {
+    font-family: 'Comic Sans MS';
+}
+
 /* Comment */
 .external-link {
     font-family: 'Times New Roman', Times, serif;
-}
-
-#index-main {
-    font-family: 'Comic Sans MS';
 }
 
 #main-header {
