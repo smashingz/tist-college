@@ -7,6 +7,10 @@ nav {
     font-family: 'Times New Roman', Times, serif;
 }
 
+#index-main {
+    font-family: 'Comic Sans MS'
+}
+
 #main-header {
     color: red;
 }
@@ -34,8 +38,4 @@ img {
 h1,
 h1 * {
     font-size: 48px;
-}
-
-#index-main !important {
-    font-family: 'Comic Sans MS'
 }
