@@ -18,7 +18,7 @@ nav {
 img {
     width: 520px;
     height: 660px;
-    float: left !important;
+    float: left;
 }
 
 p.plain-text {
@@ -28,7 +28,7 @@ p.plain-text {
 img {
     width: 130px;
     height: 165px;
-    float: right !important;
+    float: right;
 }
 
 * {
