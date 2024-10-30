@@ -22,7 +22,7 @@ p.plain-text {
 .image {
     width: 50%;
     height: 75%;
-    float: right;
+    float: left;
 }
 
 * {
