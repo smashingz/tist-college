@@ -19,7 +19,7 @@ p.plain-text {
     color: cornflowerblue;
 }
 
-img {
+.img {
     width: 150%;
     height: 175%;
     float: right;
