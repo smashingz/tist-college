@@ -6,23 +6,14 @@ nav {
     font-family: 'Comic Sans MS';
 }
 
+.img {
+    float: right;
+    transform: scale(1);
+}
+
 /* Comment */
-.external-link {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#main-header {
-    color: red;
-}
-
 p.plain-text {
     color: cornflowerblue;
-}
-
-.image {
-    width: 50%;
-    height: 75%;
-    float: left;
 }
 
 * {
@@ -32,4 +23,14 @@ p.plain-text {
 h1,
 h1 * {
     font-size: 48px;
+    color: red;
+}
+
+#in-case-of-error {
+    height: 500px;
+    width: 1500px;
+}
+
+li a {
+    color: blue;
 }
