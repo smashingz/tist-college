@@ -1,4 +1,4 @@
-article blockquote {
+blockquote {
     font-weight: bold;
     border-left: groove;
     padding-left: 5px;
@@ -6,16 +6,17 @@ article blockquote {
     color: darkred;
 }
 
-p > q {
+p>q {
     font-style: italic;
 }
 
-article h3 + p::first-letter {
+article h3+p::first-letter {
     font-size: 40px;
     color: red;
     font-weight: bolder;
 }
 
-h2,h3 {
+h2,
+h3 {
     font-style: italic;
 }
