@@ -6,11 +6,25 @@ blockquote {
     color: darkred;
 }
 
-p>q {
+p > q {
     font-style: italic;
 }
 
-article h3+p::first-letter {
+main {
+    columns: auto 2;
+}
+
+article {
+    border-radius: 2px;
+    border-width: 1px;
+    margin: 7px;
+    border: 1px solid black;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    padding: 7px;
+    display: inline-block;
+}
+
+article h3 + p::first-letter {
     font-size: 40px;
     color: red;
     font-weight: bolder;
@@ -22,13 +36,13 @@ h3 {
 }
 
 .goida {
-    width: 260px; 
+    width: 260px;
     height: 330px;
-    align: right;
+    float: right;
 }
 
 .goida-russia {
     width: 220px;
-    height: 311px; 
-    align: right;
+    height: 311px;
+    float: right;
 }
