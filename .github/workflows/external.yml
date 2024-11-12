@@ -6,6 +6,7 @@ jobs:
   deploy:
     name: Deploy to external server
     runs-on: ubuntu-latest
+    environment: external-env
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -22,7 +23,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
           source: ${{ github.workspace }}/*,!${{ github.workspace }}/.github
           target: /var/www/html/test
