@@ -1,5 +1,8 @@
 nav {
     border: double;
+    width: 25%;
+    background-color: darksalmon;
+    left: 25%;
 }
 
 #da {
