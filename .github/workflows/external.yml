@@ -1,0 +1,15 @@
+name: Deploy to external server
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to external server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: List all files
+        run: ls ${{ github.workspace }}
