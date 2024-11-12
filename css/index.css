@@ -5,6 +5,34 @@ nav {
     left: 25%;
 }
 
+#small-white-cube, #small-red-cube, #small-blue-cube {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+}
+
+#small-white-cube {
+    bottom: 45px;
+    right: 45px;
+    background-color: white;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+#small-red-cube {
+    bottom: 30px;
+    right: 30px;
+    background-color: red;
+    z-index: 0;
+}
+
+#small-blue-cube {
+    bottom: 15px;
+    right: 15px;
+    background-color: blue;
+    z-index: -1;
+}
+
 #da {
     font-family: 'Comic Sans MS';
 }
