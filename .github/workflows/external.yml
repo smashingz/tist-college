@@ -17,6 +17,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
+          host_fingerprint: ${{ secrets.EXTERNAL_PUBLIC_KEY }}
           private_key: ${{ secrets.PRIVATE_KEY }}
           command: rm -rf /var/www/html/test/*
       - name: Copy new files
