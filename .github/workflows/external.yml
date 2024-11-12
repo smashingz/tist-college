@@ -1,8 +1,5 @@
 name: Deploy to external server
 on:
-  push:
-    branches:
-    - main
   workflow_dispatch:
 
 jobs:
@@ -10,6 +7,22 @@ jobs:
     name: Deploy to external server
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: List all files
-        run: ls ${{ github.workspace }}
+        run: ls -lR ${{ github.workspace }}
+      - name: Clear previous files
+        uses: D3rHase/ssh-command-action@latest
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+          command: rm -rf /var/www/html/test
+      - name: Copy new files
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: ${{ github.workspace }}/*,!${{ github.workspace }}/.github
+          target: /var/www/html/test
