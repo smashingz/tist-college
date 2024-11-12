@@ -17,7 +17,7 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          command: rm -rf /var/www/html/test
+          command: rm -rf /var/www/html/test/*
       - name: Copy new files
         uses: appleboy/scp-action@v0.1.7
         with:
