@@ -13,18 +13,11 @@ jobs:
       - name: List all files
         run: ls -lR ${{ github.workspace }}
       - name: Clear previous files
-        uses: D3rHase/ssh-command-action@latest
+        uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4
         with:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
-          host_fingerprint: ${{ secrets.EXTERNAL_THUMBPRINT }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
-          command: rm -rf /var/www/html/test/*
-      - name: Copy new files
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          source: ${{ github.workspace }}/*,!${{ github.workspace }}/.github
-          target: /var/www/html/test
+          key: $ {{ secrets.PRIVATE_KEY }}
+          first_ssh: rm -rf /var/www/html/test/*
+          scp: |
+            ${{ github.workspace }}/*.html => /var/www/html/test/
