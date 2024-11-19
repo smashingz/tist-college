@@ -1,0 +1,23 @@
+name: Deploy to external server
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to external server
+    runs-on: ubuntu-latest
+    environment: external-env
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: List all files
+        run: ls -lR ./
+      - name: Clear previous files
+        uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          first_ssh: rm -rf /var/www/html/test/*
+          scp: |
+            ./*.html => /var/www/html/test/
