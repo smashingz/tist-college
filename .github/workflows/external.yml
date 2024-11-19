@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: List all files
-        run: ls -lR ${{ github.workspace }}
+        run: ls -lR ./
       - name: Clear previous files
         uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4
         with:
@@ -20,4 +20,4 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           first_ssh: rm -rf /var/www/html/test/*
           scp: |
-            ${{ github.workspace }}/*.html => /var/www/html/test/
+            ./*.html => /var/www/html/test/
