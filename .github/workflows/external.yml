@@ -17,7 +17,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
-          key: $ {{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           first_ssh: rm -rf /var/www/html/test/*
           scp: |
             ${{ github.workspace }}/*.html => /var/www/html/test/
