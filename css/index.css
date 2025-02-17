@@ -5,6 +5,16 @@ nav {
     left: 25%;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
 #small-white-cube, #small-red-cube, #small-blue-cube {
     width: 75px;
     height: 75px;
@@ -60,8 +70,4 @@ h1 * {
 #in-case-of-error {
     height: 500px;
     width: 1500px;
-}
-
-li a {
-    color: blue;
 }

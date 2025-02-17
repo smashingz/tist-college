@@ -34,10 +34,12 @@ article {
     display: inline-block;
 }
 
-article h3 + p::first-letter {
-    font-size: 40px;
+article p:first-of-type::first-letter {
+    font-size: 70px;
     color: red;
     font-weight: bolder;
+    display: block;
+    float: left;
 }
 
 h2,
