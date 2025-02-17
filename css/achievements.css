@@ -34,13 +34,13 @@ article {
     display: inline-block;
 }
 
-article p:first-of-type::first-letter {
-    font-size: 70px;
-    color: red;
-    font-weight: bolder;
-    display: block;
-    float: left;
-}
+    article p:first-of-type::first-letter {
+        font-size: 70px;
+        color: red;
+        font-weight: bolder;
+        display: block;
+        float: left;
+    }
 
 h2,
 h3 {
@@ -57,4 +57,54 @@ h3 {
     width: 220px;
     height: 311px;
     float: right;
+}
+
+@media print {
+    * {
+        text-align: justify;
+    }
+
+    main {
+        columns: 1;
+    }
+
+    article {
+        border: 0px;
+        box-shadow: none;
+        display: block;
+    }
+
+    article {
+        border-bottom: 8px double black;
+    }
+
+    img {
+        display: none;
+    }
+
+    article p:first-of-type::first-letter {
+        font-size: 40px;
+        color: black;
+    }
+
+    h2,
+    h3 {
+        font-style: normal;
+        text-decoration: underline;
+    }
+
+    blockquote {
+        font-weight: normal;
+        border: 0px;
+        color: black;
+        quotes: "\00ab" "\00bb"
+    }
+
+        blockquote:before {
+            content: open-quote;
+        }
+
+        blockquote:after {
+            content: close-quote;
+        }
 }
